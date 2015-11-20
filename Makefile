@@ -24,5 +24,4 @@ menuconfig:
 	cd $(OPENWRT_DIR); make menuconfig
 	
 bulid:
-	ln -s $(DOWNLOAD_DIR) $(OPENWRT_DIR)/dl
 	cd $(OPENWRT_DIR); make V=s
