@@ -36,12 +36,10 @@ MAKE_OPTS:= \
 	ARCH="$(LINUX_KARCH)" \
 	CROSS_COMPILE="$(TARGET_CROSS)" \
 	SUBDIRS="$(PKG_BUILD_DIR)" \
-	CONFIG_$(PKG_CONFIG)=m 
+	DOMULTI=1
 
 define Build/Compile
-	$(MAKE) -C "$(LINUX_DIR)" \
-		$(MAKE_OPTS) \
-		modules
+	$(MAKE) -C "$(LINUX_DIR)" $(MAKE_OPTS) 	CONFIG_$(PKG_CONFIG)=m 
 endef
 
 $(eval $(call KernelPackage,$(PKG_NAME)))
