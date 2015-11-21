@@ -1198,6 +1198,8 @@ CONFIG_PACKAGE_wireless-tools=y
 #
 # Kernel
 #
+CONFIG_PACKAGE_kmod-hello_kernel=y
+CONFIG_PACKAGE_kmod-mt7620_driver=y
 
 #
 # Kernel modules

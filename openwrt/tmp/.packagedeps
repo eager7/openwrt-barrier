@@ -616,6 +616,7 @@ package-$(CONFIG_PACKAGE_kmod-mmc-over-gpio) += kernel/mmc_over_gpio
 package-$(CONFIG_PACKAGE_kmod-mmc-spi) += kernel/linux
 package-$(CONFIG_PACKAGE_kmod-mp-alg) += kernel/linux
 package-$(CONFIG_PACKAGE_kmod-mppe) += kernel/linux
+package-$(CONFIG_PACKAGE_kmod-mt7620_driver) += mt7620_driver
 package-$(CONFIG_PACKAGE_kmod-mtdtests) += kernel/linux
 package-$(CONFIG_PACKAGE_kmod-mvsas) += kernel/linux
 package-$(CONFIG_PACKAGE_kmod-mvsdio) += kernel/linux

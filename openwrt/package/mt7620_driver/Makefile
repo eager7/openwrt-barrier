@@ -8,7 +8,7 @@
 include $(TOPDIR)/rules.mk
 include $(INCLUDE_DIR)/kernel.mk
 
-PKG_NAME:=hello_kernel
+PKG_NAME:=mt7620_driver
 PKG_RELEASE:=1
 
 include $(INCLUDE_DIR)/package.mk

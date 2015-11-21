@@ -20356,6 +20356,23 @@ John Crispin <blogic@openwrt.org>
 @@
 
 
+Source-Makefile: package/mt7620_driver/Makefile
+Package: kmod-mt7620_driver
+Version: <LINUX_VERSION>-1
+Depends: @LINUX_3_10
+Menu-Depends: 
+Provides: 
+Section: kernel
+Category: Kernel
+Title: mt7620_driver
+Maintainer: 
+Source: 
+Type: ipkg
+Description:   Kernel module to mt7620_driver
+
+@@
+
+
 Source-Makefile: package/boot/uboot-imx6/Makefile
 Package: uboot-imx6-nitrogen6dl
 Version: 2014.04-1
