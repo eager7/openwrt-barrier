@@ -13,6 +13,8 @@ PKG_RELEASE:=1
 
 include $(INCLUDE_DIR)/package.mk
   
+PKG_KCONFIG = HELLO_KERNEL
+
 define KernelPackage/$(PKG_NAME)
   CATEGORY:=Kernel
   TITLE:=$(PKG_NAME)
@@ -30,20 +32,11 @@ define Build/Prepare
 	$(CP) -R ./src/* $(PKG_BUILD_DIR)/
 endef
 
-EXTRA_KCONFIG:= \
-	CONFIG_HELLO_KERNEL=m
-
-EXTRA_CFLAGS:= \
-	$(patsubst CONFIG_%, -DCONFIG_%=1, $(patsubst %=m,%,$(filter %=m,$(EXTRA_KCONFIG)))) \
-	$(patsubst CONFIG_%, -DCONFIG_%=1, $(patsubst %=y,%,$(filter %=y,$(EXTRA_KCONFIG)))) \
-
 MAKE_OPTS:= \
 	ARCH="$(LINUX_KARCH)" \
 	CROSS_COMPILE="$(TARGET_CROSS)" \
 	SUBDIRS="$(PKG_BUILD_DIR)" \
-	EXTRA_CFLAGS="$(EXTRA_CFLAGS)" \
-	$(EXTRA_KCONFIG)
-
+	CONFIG_HELLO_KERNEL=m 
 
 define Build/Compile
 	$(MAKE) -C "$(LINUX_DIR)" \
