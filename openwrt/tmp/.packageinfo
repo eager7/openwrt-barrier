@@ -13752,6 +13752,23 @@ http://www.gnu.org/software/gdb/
 @@
 
 
+Source-Makefile: package/hello_kernel/Makefile
+Package: kmod-hello_kernel
+Version: <LINUX_VERSION>-1
+Depends: @LINUX_3_10
+Menu-Depends: 
+Provides: 
+Section: kernel
+Category: Kernel
+Title: hello_kernel
+Maintainer: 
+Source: 
+Type: ipkg
+Description:   Kernel module to hello_kernel
+
+@@
+
+
 Source-Makefile: package/network/ipv6/thc-ipv6/Makefile
 Package: thc-ipv6-address6
 Submenu: THC-IPv6 attack and analyzing toolkit

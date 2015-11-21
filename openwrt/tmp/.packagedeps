@@ -357,6 +357,7 @@ package-$(CONFIG_PACKAGE_kmod-gpio-pcf857x) += kernel/linux
 package-$(CONFIG_PACKAGE_kmod-gpio-scx200) += kernel/linux
 package-$(CONFIG_PACKAGE_kmod-gre) += kernel/linux
 package-$(CONFIG_PACKAGE_kmod-gre6) += kernel/linux
+package-$(CONFIG_PACKAGE_kmod-hello_kernel) += hello_kernel
 package-$(CONFIG_PACKAGE_kmod-hfcmulti) += kernel/linux
 package-$(CONFIG_PACKAGE_kmod-hfcpci) += kernel/linux
 package-$(CONFIG_PACKAGE_kmod-hid) += kernel/linux
