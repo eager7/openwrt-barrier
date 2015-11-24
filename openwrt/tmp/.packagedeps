@@ -1472,6 +1472,7 @@ $(curdir)/kernel/lantiq/ltq-vdsl/compile += $(curdir)/kernel/lantiq/ltq-vdsl-mei
 $(curdir)/kernel/lantiq/ltq-vdsl-mei/compile += $(curdir)/kernel/lantiq/ltq-ifxos/compile
 $(curdir)/kernel/lantiq/ltq-vmmc/compile += $(curdir)/kernel/lantiq/ltq-tapi/compile
 $(curdir)/kernel/mmc_over_gpio/compile += $(curdir)/kernel/linux/compile
+$(curdir)/mt7620_driver/compile += $(curdir)/network/utils/maccalc/compile $(curdir)/network/utils/wireless-tools/compile
 $(curdir)/kernel/rotary-gpio-custom/compile += $(curdir)/kernel/linux/compile
 $(curdir)/kernel/ar7-atm/compile += $(curdir)/kernel/linux/compile
 $(curdir)/kernel/spi-gpio-custom/compile += $(curdir)/kernel/linux/compile

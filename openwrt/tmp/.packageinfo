@@ -20358,8 +20358,9 @@ John Crispin <blogic@openwrt.org>
 
 Source-Makefile: package/mt7620_driver/Makefile
 Package: kmod-mt7620_driver
+Default: y if (CONFIG_TARGET_ramips_mt7620n || CONFIG_TARGET_ramips_mt7620a)
 Version: <LINUX_VERSION>-1
-Depends: @LINUX_3_10
+Depends: @TARGET_ramips +wireless-tools +maccalc
 Menu-Depends: 
 Provides: 
 Section: kernel
@@ -20370,6 +20371,9 @@ Source:
 Type: ipkg
 Description:   Kernel module to mt7620_driver
 
+@@
+Config:
+	source "package/mt7620_driver/config.in"
 @@
 
 
